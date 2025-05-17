@@ -72,7 +72,7 @@ import { Component } from '@angular/core';
         <h3>💻 Probar código Java online</h3>
         <p>En esta sección puedes probar tus métodos Java sin instalar nada:</p>
         <iframe
-          src="https://www.jdoodle.com/ia/1Hh0"
+          src="https://www.jdoodle.com/ia/1HhK"
           width="100%"
           height="400"
           frameborder="0"
