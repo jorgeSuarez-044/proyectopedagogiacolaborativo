@@ -34,8 +34,8 @@ import { CommonModule } from '@angular/common';
         <li>
           <strong>Integración de tecnologías emergentes:</strong>
           <ul>
-            <li>IDE colaborativos como <em>Replit</em> o <em>CodeTogether</em> para programar en línea.</li>
-            <li>Uso de asistentes IA como ChatGPT para resolver dudas de Java.</li>
+            <li>IDE colaborativos como <em>Jdoodle</em> o <em>CodeTogether</em> para programar en línea.</li>
+            <li>Uso de asistentes IA como el consumo de openai para resolver dudas de Java.</li>
             <li>Videos interactivos o simuladores para aprender sintaxis de forma visual.</li>
           </ul>
         </li>
