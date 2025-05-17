@@ -14,6 +14,16 @@ import { Component } from '@angular/core';
           </a>
         </div>
       </div>
+      <iframe 
+  src="https://prezi.com/view/J5U1cdZshVLK7QkuYRyO/embed" 
+  width="960" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen 
+  allow="autoplay; fullscreen; vr"
+  style="max-width: 100%; border: none;">
+</iframe>
+
     </section>
   `,
   styles: [`

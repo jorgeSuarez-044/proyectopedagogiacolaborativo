@@ -6,14 +6,40 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   template: `
-    <nav class="navbar">
-      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="temas" routerLinkActive="active">Temas</a>
-      <a routerLink="recursos" routerLinkActive="active">Recursos</a>
-      <a routerLink="colaborativo" routerLinkActive="active">Colaborativo</a>
+    <nav class="navbar" aria-label="Main navigation">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        tabindex="0"
+        (mouseenter)="speakText('Home')"
+        (focus)="speakText('Home')"
+      >Home</a>
+      <a
+        routerLink="temas"
+        routerLinkActive="active"
+        tabindex="0"
+        (mouseenter)="speakText('Temas')"
+        (focus)="speakText('Temas')"
+      >Temas</a>
+      <a
+        routerLink="recursos"
+        routerLinkActive="active"
+        tabindex="0"
+        (mouseenter)="speakText('Recursos')"
+        (focus)="speakText('Recursos')"
+      >Recursos</a>
+      <a
+        routerLink="colaborativo"
+        routerLinkActive="active"
+        tabindex="0"
+        (mouseenter)="speakText('Colaborativo')"
+        (focus)="speakText('Colaborativo')"
+      >Colaborativo</a>
     </nav>
   `,
   styles: [`
+    /* Tus estilos sin cambios */
     .navbar {
       background: rgba(20, 20, 30, 0.8);
       backdrop-filter: blur(20px);
@@ -50,6 +76,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       overflow: hidden;
       z-index: 0;
       user-select: none;
+      outline-offset: 3px;
     }
 
     .navbar a::before {
@@ -101,4 +128,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     }
   `]
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  speakText(text: string) {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      const synth = window.speechSynthesis;
+      if (synth.speaking) {
+        synth.cancel();
+      }
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-ES'; // Cambiar a 'en-US' si quieres inglés
+      synth.speak(utterance);
+    }
+  }
+}
