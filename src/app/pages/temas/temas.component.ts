@@ -8,13 +8,48 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <h2>Temas del Proyecto</h2>
+    <h2 style="color: #27ae60;">Temas del Proyecto </h2>
+
+<ul>
+  <li>
+    <strong>Definición de objetivos pedagógicos:</strong>
+    En Java básico, los objetivos deben ser claros y alcanzables. Por ejemplo:
     <ul>
-      <li>Definición de objetivos pedagógicos</li>
-      <li>Estrategias didácticas para el aprendizaje colaborativo</li>
-      <li>Integración de tecnologías emergentes</li>
-      <li>Evaluación y estándares de calidad</li>
+      <li>Aprender a usar variables, estructuras de control y funciones en equipo.</li>
+      <li>Desarrollar un programa simple entre compañeros (como una calculadora o menú interactivo).</li>
+      <li>Fomentar la responsabilidad compartida en tareas de codificación.</li>
     </ul>
+  </li>
+
+  <li>
+    <strong>Estrategias didácticas para el aprendizaje colaborativo:</strong>
+    <ul>
+      <li>Programación en parejas: dos estudiantes resuelven juntos un problema en Java.</li>
+      <li>Proyectos simples en grupo: como un sistema de notas o agenda.</li>
+      <li>División de tareas: uno escribe el código, otro lo prueba y otro lo documenta.</li>
+      <li>Uso básico de <code>GitHub</code> para guardar y compartir el código.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Integración de tecnologías emergentes:</strong>
+    <ul>
+      <li>IDE colaborativos como <em>Replit</em> o <em>CodeTogether</em> para programar en línea.</li>
+      <li>Uso de asistentes IA como ChatGPT para resolver dudas de Java.</li>
+      <li>Videos interactivos o simuladores para aprender sintaxis de forma visual.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Evaluación y estándares de calidad:</strong>
+    <ul>
+      <li>Código limpio, comentado y funcional.</li>
+      <li>Participación de todos los miembros del grupo.</li>
+      <li>Listas de cotejo simples: ¿Funciona? ¿Está ordenado? ¿Participaron todos?</li>
+      <li>Autoevaluaciones y coevaluaciones sencillas.</li>
+    </ul>
+  </li>
+</ul>
 
     <hr />
 
