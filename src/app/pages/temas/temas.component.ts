@@ -53,37 +53,7 @@ import { CommonModule } from '@angular/common';
 
     <hr />
 
-    <h3>Asistente IA Leonardo</h3>
-
-    <div class="chat-container">
-
-      <!-- Mensaje Bot -->
-      <div *ngIf="respuesta" class="message bot-message" unselectable="on" onselectstart="return false;" onmousedown="return false;">
-        <img src="https://i.ibb.co/cXTLBwGZ/bot.png" alt="Bot Avatar" class="avatar" />
-        <div class="bubble no-select">
-          {{ respuesta }}
-        </div>
-      </div>
-
-      <!-- Mensaje Usuario -->
-      <div *ngIf="mensaje" class="message user-message">
-        <div class="bubble">
-          {{ mensaje }}
-        </div>
-      </div>
-
-      <!-- Input y Botón -->
-      <div class="input-area">
-        <input
-          [(ngModel)]="mensaje"
-          placeholder="Escribe tu pregunta"
-          (keyup.enter)="consultar()"
-          autocomplete="off"
-          spellcheck="false"
-        />
-        <button (click)="consultar()">Enviar</button>
-      </div>
-    </div>
+    
   `,
   styles: [`
     /* Títulos */
@@ -242,7 +212,7 @@ export class TemasComponent {
   mensaje: string = '';
   respuesta: string = '';
 
-  private apiKey = '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';
+  private apiKey = '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';
 
   constructor(private http: HttpClient) {}
 
