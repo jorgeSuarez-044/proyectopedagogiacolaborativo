@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
     <div class="chat-panel" *ngIf="mostrar">
       <div class="chat-header">
         <strong>Leonardo IA</strong>
-        <button (click)="toggleChat()" aria-label="Cerrar chat">✖</button>
+        <button (click)="toggleChat()" aria-label="Cierra el  chat">✖</button>
       </div>
 
       <div class="chat-body">
@@ -226,7 +226,7 @@ export class AsistenteComponent {
   respuesta: string = '';
   mostrar: boolean = false;
 
-  private apiKey = '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';
+  private apiKey = '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';
 
   constructor(private http: HttpClient) {}
 
