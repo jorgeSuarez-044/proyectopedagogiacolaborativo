@@ -51,9 +51,26 @@ import { FormsModule } from '@angular/forms';
     </section>
 
     <!-- Juego 3: Escribe el Código -->
+    
     <section class="game animate__animated animate__fadeInUp animate__delay-2s">
       <h3>💻 Juego 3: Escribe el Código Java</h3>
       <p>Completa el siguiente código Java para imprimir "Hola Mundo" correctamente.</p>
+<div class="code-container">
+  <div class="code-header">
+    <span>Ejemplo: Hola Mundo en Java</span>
+    <button class="copy-button" (click)="copiarCodigo()">📋 Copiar</button>
+  </div>
+
+  <pre><code class="java">
+public class HolaMundo {{ '{' }}
+    public static void main(String[] args) {{ '{' }}
+        System.out.println("Hola Mundo");
+    {{ '}' }}
+{{ '}' }}
+  </code></pre>
+</div>
+
+
       <textarea [(ngModel)]="javaCode" rows="5" cols="60" placeholder="Escribe aquí tu código Java..."></textarea>
       <br>
       <button (click)="checkCode()">🧪 Evaluar código</button>
@@ -72,6 +89,48 @@ import { FormsModule } from '@angular/forms';
       border-radius: 1rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+.code-container {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  font-family: 'Courier New', monospace;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #a6e22e;
+  font-weight: bold;
+}
+
+pre {
+  margin: 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.copy-button {
+  background-color: #66d9ef;
+  color: #1b1e1f;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #5acde0;
+}
 
     section.intro h2 {
       color: #2c3e50;
@@ -214,6 +273,20 @@ export class ColaborativoComponent {
       this.triviaFeedback = '';
     }, 1500);
   }
+copiarCodigo() {
+  const codigo = `
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("Hola Mundo");
+    }
+}
+  `;
+  navigator.clipboard.writeText(codigo).then(() => {
+    alert('Código copiado al portapapeles!');
+  }).catch(err => {
+    console.error('Error al copiar:', err);
+  });
+}
 
   // Juego 2: Matching
   matchLeft = ['Clase', 'Método', 'Variable'];

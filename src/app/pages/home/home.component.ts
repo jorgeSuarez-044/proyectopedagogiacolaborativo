@@ -25,6 +25,7 @@ import { Component } from '@angular/core';
 </iframe>
 
     </section>
+    
   `,
   styles: [`
     .home-container {
