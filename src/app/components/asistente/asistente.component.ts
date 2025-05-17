@@ -157,7 +157,7 @@ export class AsistenteComponent {
   respuesta: string = '';
   mostrar: boolean = false;
 
-  private apiKey = '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';
+  private apiKey = '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';
 
   constructor(private http: HttpClient) {}
 
