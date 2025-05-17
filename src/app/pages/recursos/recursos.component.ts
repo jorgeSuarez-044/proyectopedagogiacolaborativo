@@ -47,6 +47,26 @@ import { Component } from '@angular/core';
         </ol>
         <p>Con esto estás listo para programar en Java con Eclipse 🚀</p>
       </div>
+            <div class="card fade-in">
+        <h3>🔧 Instalación de Git</h3>
+        <p>Git es una herramienta esencial para el control de versiones y trabajo colaborativo en proyectos de programación.</p>
+
+        <p>Puedes descargar Git desde su sitio oficial:</p>
+        <p>
+          🔗 <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
+        </p>
+
+        <h4>✅ Pasos para instalar Git:</h4>
+        <ol>
+          <li>Ingresa al enlace anterior y selecciona tu sistema operativo (Windows, macOS o Linux).</li>
+          <li>Descarga el instalador y ejecútalo.</li>
+          <li>Sigue los pasos del asistente de instalación dejando las opciones por defecto.</li>
+          <li>Una vez instalado, abre una terminal y ejecuta <code>git --version</code> para verificar que está funcionando.</li>
+        </ol>
+
+        <p>Con Git instalado, podrás clonar repositorios, guardar versiones de tu código y colaborar con otros fácilmente.</p>
+      </div>
+
 
       <div class="card fade-in">
         <h3>💻 Probar código Java online</h3>
